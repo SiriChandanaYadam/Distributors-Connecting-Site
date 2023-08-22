@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>HTML practice 3</title>
+
+<style>
+.container{
+  text-align: center;
+}
+.top-right{
+  position:absolute;
+  font-size : 25px;
+  top:8px;
+  right :50px;
+  display: inline-block;
+}
+.container2{
+            margin-top:10px;
+            margin-left:25%;
+            content:"";
+            clear:both;
+            display:table;
+            width : 50%;
+ }
+
+.container3{
+            text-align:center;
+            font-size : 25px;
+            font-family:Arial;
+            background-color :pink;
+            float:left;
+            width: 30%;
+            margin-left: 10px;
+            height :150px;
+ }
+.dButton {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dButton:hover, .dButton:focus {
+  background-color: #2980B9;
+}
+
+
+.dropDownContent {
+  display: none;
+  right :45px;
+  top :60px;
+  position :absolute;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropDownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropDownContent a:hover {background-color: #ddd;}
+.show {display:block;}
+</style>
+</head>
+<body style="background-color:AliceBlue">
+<div class ="container">
+  <img src="C:\Users\Home\Documents\WhatsApp Image 2023-02-13 at 02.06.30.jpeg" style="width:55%;height:70%" >
+  <div class="top-right">
+  <button Onclick="fun()" class="dButton">Register/Login</div>
+  <div id="myDropdown" class="dropDownContent">
+     <a href="C:\Users\Home\Desktop\HTML\HACKATHON\IR.html">Industry</a>
+     <a href="C:\Users\Home\Desktop\HTML\HACKATHON\DR.html">Distributor</a>
+   </div>
+</div>
+
+<div class = "container2">
+   <div class = "container3">
+   Industries<br> Registered :<br><br><font size = "20px">150</font>
+   </div>
+   <div class = "container3">
+   Distributors Registered:<br><br><font size = "20px" >1000</font>
+   </div>
+   <div class = "container3">
+   <br>Domains :<br><br><font size = "20px" >6</font>
+   </div>
+</div>
+<script type="text/javascript">
+function fun(){
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dButton')) {
+    var dropdowns = document.getElementsByClassName("dropDownContent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>  
+</body>
+</html>
+
